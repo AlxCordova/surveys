@@ -24,3 +24,6 @@ dotnet list package
 ```
 
 Se incluirá el script utilizado para la base de datos, así como la colección de peticiones realizadas desde Postman.
+
+## SQL
+Se agrego el archivo Survey.sql, el cual contiene la estructura de base de datos utilizada para realizar las pruebas, así como también los procedimientos almacenados utilizados.
