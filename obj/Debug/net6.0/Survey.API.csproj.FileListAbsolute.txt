@@ -41,3 +41,4 @@ C:\Users\alexc\Documents\Devel\Survey.API\bin\Debug\net6.0\Microsoft.IdentityMod
 C:\Users\alexc\Documents\Devel\Survey.API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\alexc\Documents\Devel\Survey.API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\alexc\Documents\Devel\Survey.API\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\alexc\Documents\Devel\Survey.API\bin\Debug\net6.0\Acme-Survey.postman_collection.json

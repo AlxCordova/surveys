@@ -1,0 +1,944 @@
+{
+	"info": {
+		"_postman_id": "62462946-83d9-4f82-9344-9f78e876e4a1",
+		"name": "Acme-Survey",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17371756"
+	},
+	"item": [
+		{
+			"name": "Survey",
+			"item": [
+				{
+					"name": "Create Survey",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJaV1IzYVc0dVkyOXlaRzkyWVE9PSIsIm5iZiI6MTY3NTQ4NDk5MSwiZXhwIjoxNjc1NDg4NTkxLCJpYXQiOjE2NzU0ODQ5OTF9.XOuaUP9zIejCl56Ei1Hshj29EoyTLwX16UeIZKEik84",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Prueba técnica\",\r\n    \"description\": \"Encuesta para realización de pruebas técnicas\",\r\n    \"questions\": [\r\n        {\r\n            \"name\": \"Edad\",\r\n            \"title\": \"¿Cuántos años tiene?\",\r\n            \"required\": \"N\",\r\n            \"order\": 1,\r\n            \"input_type_id\": 2\r\n        },\r\n        {\r\n            \"name\": \"Puesto\",\r\n            \"title\": \"¿Cuál es el puesto que ocupa actualmente?\",\r\n            \"required\": \"S\",\r\n            \"order\": 2,\r\n            \"input_type_id\": 1\r\n        },\r\n        {\r\n            \"name\": \"Experiencia\",\r\n            \"title\": \"¿Cuántos años de experiencia tiene en el cargo?\",\r\n            \"required\": \"S\",\r\n            \"order\": 2,\r\n            \"input_type_id\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7268/api/surveys",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7268",
+							"path": [
+								"api",
+								"surveys"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Survey",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Prueba técnica\",\r\n    \"description\": \"Encuesta para realización de pruebas técnicas\",\r\n    \"questions\": [\r\n        {\r\n            \"name\": \"Edad\",\r\n            \"title\": \"¿Cuántos años tiene?\",\r\n            \"required\": \"N\",\r\n            \"order\": 1,\r\n            \"input_type_id\": 2\r\n        },\r\n        {\r\n            \"name\": \"Puesto\",\r\n            \"title\": \"¿Cuál es el puesto que ocupa actualmente?\",\r\n            \"required\": \"S\",\r\n            \"order\": 2,\r\n            \"input_type_id\": 1\r\n        },\r\n        {\r\n            \"name\": \"Experiencia\",\r\n            \"title\": \"¿Cuántos años de experiencia tiene en el cargo?\",\r\n            \"required\": \"S\",\r\n            \"order\": 2,\r\n            \"input_type_id\": 2\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7268/api/surveys",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7268",
+									"path": [
+										"api",
+										"surveys"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 02:08:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"Prueba técnica\",\n        \"description\": \"Encuesta para realización de pruebas técnicas\",\n        \"link\": \"Jv5QkQXO4b3\",\n        \"questions\": [\n            {\n                \"id\": null,\n                \"survey_id\": null,\n                \"name\": \"Edad\",\n                \"title\": \"¿Cuántos años tiene?\",\n                \"required\": \"N\",\n                \"order\": 1,\n                \"input_type_id\": 2,\n                \"input_type\": null\n            },\n            {\n                \"id\": null,\n                \"survey_id\": null,\n                \"name\": \"Puesto\",\n                \"title\": \"¿Cuál es el puesto que ocupa actualmente?\",\n                \"required\": \"S\",\n                \"order\": 2,\n                \"input_type_id\": 1,\n                \"input_type\": null\n            },\n            {\n                \"id\": null,\n                \"survey_id\": null,\n                \"name\": \"Experiencia\",\n                \"title\": \"¿Cuántos años de experiencia tiene en el cargo?\",\n                \"required\": \"S\",\n                \"order\": 2,\n                \"input_type_id\": 2,\n                \"input_type\": null\n            }\n        ]\n    },\n    \"message\": \"Encuesta creada con éxito\",\n    \"status\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Alll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJaV1IzYVc0dVkyOXlaRzkyWVE9PSIsIm5iZiI6MTY3NTQ4NDk5MSwiZXhwIjoxNjc1NDg4NTkxLCJpYXQiOjE2NzU0ODQ5OTF9.XOuaUP9zIejCl56Ei1Hshj29EoyTLwX16UeIZKEik84",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7268/api/surveys",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7268",
+							"path": [
+								"api",
+								"surveys"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Alll",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7268/api/surveys",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7268",
+									"path": [
+										"api",
+										"surveys"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 02:10:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 3,\n            \"name\": \"Encuesta Test\",\n            \"description\": \"Encuesta de pruebas\",\n            \"link\": \"LcYTo472Pa0\",\n            \"questions\": []\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Prueba técnica\",\n            \"description\": \"Encuesta para realización de pruebas técnicas\",\n            \"link\": \"Jv5QkQXO4b3\",\n            \"questions\": [\n                {\n                    \"id\": 1,\n                    \"name\": \"Edad\",\n                    \"title\": \"¿Cuántos años tiene?\",\n                    \"required\": \"N\",\n                    \"order\": 1,\n                    \"input_type_id\": 2,\n                    \"input_type\": \"number\"\n                },\n                {\n                    \"id\": 2,\n                    \"name\": \"Puesto\",\n                    \"title\": \"¿Cuál es el puesto que ocupa actualmente?\",\n                    \"required\": \"S\",\n                    \"order\": 2,\n                    \"input_type_id\": 1,\n                    \"input_type\": \"text\"\n                },\n                {\n                    \"id\": 3,\n                    \"name\": \"Experiencia\",\n                    \"title\": \"¿Cuántos años de experiencia tiene en el cargo?\",\n                    \"required\": \"S\",\n                    \"order\": 2,\n                    \"input_type_id\": 2,\n                    \"input_type\": \"number\"\n                }\n            ]\n        }\n    ],\n    \"message\": \"Encuestas obtenidas con éxito\",\n    \"status\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7268/api/surveys/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7268",
+							"path": [
+								"api",
+								"surveys",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get by Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7268/api/surveys/4",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7268",
+									"path": [
+										"api",
+										"surveys",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 02:11:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"Prueba técnica\",\n        \"description\": \"Encuesta para realización de pruebas técnicas\",\n        \"link\": \"Jv5QkQXO4b3\",\n        \"questions\": [\n            {\n                \"id\": 1,\n                \"name\": \"Edad\",\n                \"title\": \"¿Cuántos años tiene?\",\n                \"required\": \"N\",\n                \"order\": 1,\n                \"input_type_id\": 2,\n                \"input_type\": \"number\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Puesto\",\n                \"title\": \"¿Cuál es el puesto que ocupa actualmente?\",\n                \"required\": \"S\",\n                \"order\": 2,\n                \"input_type_id\": 1,\n                \"input_type\": \"text\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Experiencia\",\n                \"title\": \"¿Cuántos años de experiencia tiene en el cargo?\",\n                \"required\": \"S\",\n                \"order\": 2,\n                \"input_type_id\": 2,\n                \"input_type\": \"number\"\n            }\n        ]\n    },\n    \"message\": \"Encuesta obtenida con éxito\",\n    \"status\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Get by Link",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7268/api/surveys/link/Jv5QkQXO4b3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7268",
+							"path": [
+								"api",
+								"surveys",
+								"link",
+								"Jv5QkQXO4b3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get by Link",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7268/api/surveys/link/Jv5QkQXO4b3",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7268",
+									"path": [
+										"api",
+										"surveys",
+										"link",
+										"Jv5QkQXO4b3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 02:12:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"Prueba técnica\",\n        \"description\": \"Encuesta para realización de pruebas técnicas\",\n        \"link\": \"Jv5QkQXO4b3\",\n        \"questions\": [\n            {\n                \"id\": 1,\n                \"name\": \"Edad\",\n                \"title\": \"¿Cuántos años tiene?\",\n                \"required\": \"N\",\n                \"order\": 1,\n                \"input_type_id\": 2,\n                \"input_type\": \"number\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Puesto\",\n                \"title\": \"¿Cuál es el puesto que ocupa actualmente?\",\n                \"required\": \"S\",\n                \"order\": 2,\n                \"input_type_id\": 1,\n                \"input_type\": \"text\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Experiencia\",\n                \"title\": \"¿Cuántos años de experiencia tiene en el cargo?\",\n                \"required\": \"S\",\n                \"order\": 2,\n                \"input_type_id\": 2,\n                \"input_type\": \"number\"\n            }\n        ]\n    },\n    \"message\": \"Encuesta obtenida con éxito\",\n    \"status\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJaV1IzYVc0dVkyOXlaRzkyWVE9PSIsIm5iZiI6MTY3NTQ4NDk5MSwiZXhwIjoxNjc1NDg4NTkxLCJpYXQiOjE2NzU0ODQ5OTF9.XOuaUP9zIejCl56Ei1Hshj29EoyTLwX16UeIZKEik84",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7268/api/surveys/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7268",
+							"path": [
+								"api",
+								"surveys",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7268/api/surveys/3",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7268",
+									"path": [
+										"api",
+										"surveys",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 02:13:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Encuesta eliminada con éxito\",\n    \"status\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Survey",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJaV1IzYVc0dVkyOXlaRzkyWVE9PSIsIm5iZiI6MTY3NTQ4NDk5MSwiZXhwIjoxNjc1NDg4NTkxLCJpYXQiOjE2NzU0ODQ5OTF9.XOuaUP9zIejCl56Ei1Hshj29EoyTLwX16UeIZKEik84",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"description\": \"Encuesta para verificación de habilidades técnicas\",\r\n    \"questions\": [\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"Posición\",\r\n            \"title\": \"¿Qué puesto desempeña actualmente?\",\r\n            \"required\": \"S\",\r\n            \"order\": 3\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7268/api/surveys",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7268",
+							"path": [
+								"api",
+								"surveys"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Survey",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 4,\r\n    \"description\": \"Encuesta para verificación de habilidades técnicas\",\r\n    \"questions\": [\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"Posición\",\r\n            \"title\": \"¿Qué puesto desempeña actualmente?\",\r\n            \"required\": \"S\",\r\n            \"order\": 3\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7268/api/surveys",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7268",
+									"path": [
+										"api",
+										"surveys"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 02:18:25 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Encuesta modificada con éxito\",\n    \"status\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Answers",
+			"item": [
+				{
+					"name": "Save Answers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"survey_id\": 4,\r\n    \"survey_question_id\": 1,\r\n    \"response\": \"29\"\r\n  },\r\n  {\r\n    \"survey_id\": 4,\r\n    \"survey_question_id\": 2,\r\n    \"response\": \"Backend Developer\"\r\n  },\r\n  {\r\n    \"survey_id\": 4,\r\n    \"survey_question_id\": 3,\r\n    \"response\": \"3 años\"\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7268/api/answer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7268",
+							"path": [
+								"api",
+								"answer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save Answers",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n  {\r\n    \"survey_id\": 4,\r\n    \"survey_question_id\": 1,\r\n    \"response\": \"29\"\r\n  },\r\n  {\r\n    \"survey_id\": 4,\r\n    \"survey_question_id\": 2,\r\n    \"response\": \"Backend Developer\"\r\n  },\r\n  {\r\n    \"survey_id\": 4,\r\n    \"survey_question_id\": 3,\r\n    \"response\": \"3 años\"\r\n  }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7268/api/answer",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7268",
+									"path": [
+										"api",
+										"answer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 02:20:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Respuestas almacenadas con éxito\",\n    \"status\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Answers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJaV1IzYVc0dVkyOXlaRzkyWVE9PSIsIm5iZiI6MTY3NTQ4NDk5MSwiZXhwIjoxNjc1NDg4NTkxLCJpYXQiOjE2NzU0ODQ5OTF9.XOuaUP9zIejCl56Ei1Hshj29EoyTLwX16UeIZKEik84",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7268/api/answer/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7268",
+							"path": [
+								"api",
+								"answer",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Answers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7268/api/answer/4",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7268",
+									"path": [
+										"api",
+										"answer",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 02:26:30 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"survey_id\": 4,\n        \"name\": \"Prueba técnica\",\n        \"description\": \"Encuesta para verificación de habilidades técnicas\",\n        \"answers\": [\n            {\n                \"question_id\": 1,\n                \"name\": \"Edad\",\n                \"title\": \"¿Cuántos años tiene?\",\n                \"required\": \"N\",\n                \"response\": \"29\",\n                \"order\": 1,\n                \"created_at\": \"02/03/2023 20:20:43\"\n            },\n            {\n                \"question_id\": 3,\n                \"name\": \"Experiencia\",\n                \"title\": \"¿Cuántos años de experiencia tiene en el cargo?\",\n                \"required\": \"S\",\n                \"response\": \"3 años\",\n                \"order\": 2,\n                \"created_at\": \"02/03/2023 20:20:43\"\n            },\n            {\n                \"question_id\": 2,\n                \"name\": \"Posición\",\n                \"title\": \"¿Qué puesto desempeña actualmente?\",\n                \"required\": \"S\",\n                \"response\": \"Backend Developer\",\n                \"order\": 3,\n                \"created_at\": \"02/03/2023 20:20:43\"\n            }\n        ]\n    },\n    \"message\": \"Respuestas obtenida con éxito\",\n    \"status\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Inputs",
+			"item": [
+				{
+					"name": "Get Inputs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7268/api/inputs",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7268",
+							"path": [
+								"api",
+								"inputs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Inputs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7268/api/inputs",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7268",
+									"path": [
+										"api",
+										"inputs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 02:40:29 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"text\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"number\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"datetime\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"file\"\n        }\n    ],\n    \"message\": \"Inputs obtenidos con éxito\",\n    \"status\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Input",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJaV1IzYVc0dVkyOXlaRzkyWVE9PSIsIm5iZiI6MTY3NTQ4NDk5MSwiZXhwIjoxNjc1NDg4NTkxLCJpYXQiOjE2NzU0ODQ5OTF9.XOuaUP9zIejCl56Ei1Hshj29EoyTLwX16UeIZKEik84",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"file\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7268/api/inputs",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7268",
+							"path": [
+								"api",
+								"inputs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Input",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"file\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7268/api/inputs",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7268",
+									"path": [
+										"api",
+										"inputs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 02:39:55 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"file\"\n    },\n    \"message\": \"Input creado con éxito\",\n    \"status\": 200\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Alex\",\r\n    \"last_name\": \"Cordova\",\r\n    \"email\": \"alex.cordova@mail.com\",\r\n    \"password\": \"alex1599\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7268/api/auth/create-user",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7268",
+							"path": [
+								"api",
+								"auth",
+								"create-user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\": \"Alex\",\r\n    \"last_name\": \"Cordova\",\r\n    \"email\": \"alex.cordova@mail.com\",\r\n    \"password\": \"alex1599\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7268/api/auth/create-user",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7268",
+									"path": [
+										"api",
+										"auth",
+										"create-user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 04:36:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"first_name\": \"Alex\",\n        \"last_name\": \"Cordova\",\n        \"email\": \"alex.cordova@mail.com\",\n        \"password\": \"alex1599\",\n        \"api_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJRV3hsZUE9PSIsIm5iZiI6MTY3NTQ4NTM3NiwiZXhwIjoxNjc1NDg4OTc2LCJpYXQiOjE2NzU0ODUzNzZ9.IgOHweOnwmC_u0DP7DCEgata_VPvSxeFaGXKwRSkcAc\"\n    },\n    \"message\": \"Usuario creado con éxito\",\n    \"status\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"edwin.cordova\",\r\n    \"password\": \"hola1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7268/api/auth/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7268",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"edwin.cordova\",\r\n    \"password\": \"hola1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7268/api/auth/login",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7268",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 04:29:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"first_name\": \"Edwin\",\n        \"last_name\": \"Cordova\",\n        \"email\": \"edwin.cordova\",\n        \"password\": null,\n        \"api_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJaV1IzYVc0dVkyOXlaRzkyWVE9PSIsIm5iZiI6MTY3NTQ4NDk5MSwiZXhwIjoxNjc1NDg4NTkxLCJpYXQiOjE2NzU0ODQ5OTF9.XOuaUP9zIejCl56Ei1Hshj29EoyTLwX16UeIZKEik84\"\n    },\n    \"message\": \"Login correcto\",\n    \"status\": 200\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
